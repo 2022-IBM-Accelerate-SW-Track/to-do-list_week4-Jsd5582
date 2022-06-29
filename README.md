@@ -44,14 +44,14 @@ Implementation requirements:
            const fs = require("fs");
            ```
            **Note:** This snippet of code is importing external modules and setting the environment variables. Make sure to replace `<port>` with a port number of your choosing such as **8080** or **3001** keep note of this port number for future usage. Click on the following links [**express**](https://expressjs.com/en/5x/api.html), [**cors**](https://expressjs.com/en/resources/middleware/cors.html), [**body-parser**](https://expressjs.com/en/resources/middleware/body-parser.html), and [**fs**](https://nodejs.dev/learn/the-nodejs-fs-module) to learn more about these modules and their usage.
-        2. Implement the code snippet provided below:
+        2. Implement the code snippet provided below:-
            ```
            app.use(cors());
            app.use(bodyParser.json({ extended: true }));
            app.listen(port, () => console.log("Backend server live on " + port));
            ```
            **Note:** This snippet of code sets up our express application and returns a message back to console once our application is running.
-        3. Implement the code snippet provided below:
+        3. Implement the code snippet provided below:-
            ```
            app.get("/", (req, res) => {
            res.send({ message: "Connected to Backend server!" });
@@ -63,7 +63,7 @@ Implementation requirements:
             app.post("/add/item", addItem)
             ```
             **Note:** This snippet of code makes a call the `addItem` function once a **POST** request to the specified route is made.
-         5. Implement the code snippet provided below:
+         5. Implement the code snippet provided below:-
             ```
             function addItem (request, response) {
             let id = request.body.jsonObject.id
@@ -95,7 +95,7 @@ Implementation requirements:
         1. Create a new file called `database.json` out of which we'll store the data received from the front-end by running this command: `touch database.json`\
            **Note:** If this command doesn't work, look into creating the file thru a file explorer or VS code.
       + Navigate to `backend/database.json`
-        1. Implement the code snippet provided below:
+        1. Implement the code snippet provided below:-
            ```
            []
            ```
@@ -104,11 +104,11 @@ Implementation requirements:
         <img width="302" alt="Screen Shot 2022-06-23 at 11 27 59 AM" src="https://user-images.githubusercontent.com/57464095/175369370-5a323053-deff-43a3-ad1c-bca2918135f8.png">
 
 ### Todo List APP (Front-End)
-1. In this step, we will be implementing axios in order to submit requests to the Express Application as well as to receive a response.
+1. In this step, we will be implementing axios in order to submit requests to the Express Application as well as to receive a response.-
       + Navigate to our project's root directory and run the following command w/in the terminal. **Hint:** Essentially, this is the directory where our `src` and `public` folders are located.
         1. Run the following command to install Axios as a dependency: `npm install axios`
       + Navigate to `src/component/AddTodo.js`
-        1. Import the Axios library at the top of our file:
+        1. Import the Axios library at the top of our file:-
            ```
            import Axios from "axios";
            ```
