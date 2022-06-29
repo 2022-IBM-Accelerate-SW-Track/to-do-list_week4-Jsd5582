@@ -3,15 +3,15 @@ const express = require("express"),
                   app = express(),
                   port = process.env.PORT || 8080,
                   cors = require("cors");
-           const bodyParser = require('body-parser');
-           const fs = require("fs");
-app.use(cors());
-app.use(bodyParser.json({ extended: true }));
-app.listen(port, () => console.log("Backend server live on " + port));
-app.get("/", (req, res) => {
-    res.send({ message: "Connected to Backend server!" });
-    });
-app.post("/add/item", addItem)
+            const bodyParser = require('body-parser');
+            const fs = require("fs");
+            app.use(cors());
+            app.use(bodyParser.json({ extended: true }));
+            app.listen(port, () => console.log("Backend server live on " + port));
+            app.get("/", (req, res) => {
+                res.send({ message: "Connected to Backend server!" });
+                });
+            app.post("/add/item", addItem)
 function addItem (request, response) {
     let id = request.body.jsonObject.id
     let task = request.body.jsonObject.task

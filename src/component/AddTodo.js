@@ -40,6 +40,22 @@ class AddTodo extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     if (this.state.content.trim()) {
+      const jsonObject = {
+        id: this.state.id,
+        task: this.state.content,
+        currentDate: this.state.date,
+        dueDate: this.state.dueDate
+     };
+     Axios({
+      method: "POST",
+      url: "http://localhost:8080/add/item",
+      data: {jsonObject},
+      headers: {
+         "Content-Type": "application/json"
+      }
+      }).then(res => {
+      console.log(res.data.message);
+      });
       this.props.addTodo(this.state);
       this.setState({
         content: "",
@@ -48,6 +64,9 @@ class AddTodo extends Component {
       });
     }
   };
+
+
+  
   render() {
     return (
       // 1. When rendering a component, you can render as many elements as you like as long as it is wrapped inside
