@@ -28,7 +28,7 @@ Implementation requirements:
         5. Create a new file called `index.js` out of which we'll run our Express server by running this command: `touch index.js`\
            **Note:** If this command doesn't work, look into creating the file thru a file explorer or VS code.
          
-      + The file structure of your project should now look similar to what is shown on the screenshot below:
+      + The file structure of your project should now look similar to what is shown on the screenshot below:-
         <img width="299" alt="Screen Shot 2022-06-23 at 6 25 55 AM" src="https://user-images.githubusercontent.com/57464095/175310108-65d0525c-c0b4-4432-8c12-a01ce7a0c05e.png">
            
 2. In this step, we will be using Express to create a simple web server that will then be ran on a specified port.\
